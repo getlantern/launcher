@@ -3,10 +3,9 @@ package launcher
 
 import (
 	"fmt"
-	"github.com/kardianos/osext"
-	"github.com/luisiturrios/gowin"
-
 	"github.com/getlantern/golog"
+	"github.com/getlantern/gowin"
+	"github.com/kardianos/osext"
 )
 
 const (
