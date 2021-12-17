@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/getlantern/golog"
 	"github.com/getlantern/gowin"
-	"github.com/kardianos/osext"
+	"os"
 )
 
 const (
@@ -19,7 +19,7 @@ var (
 func CreateLaunchFile(autoLaunch bool) {
 	var startupCommand string
 
-	lanternPath, err := osext.Executable()
+	lanternPath, err := os.Executable()
 	if err != nil {
 		log.Errorf("Could not get Lantern directory path: %q", err)
 		return

@@ -4,11 +4,11 @@ package launcher
 import (
 	"bytes"
 	"io/ioutil"
+	"os"
 	"text/template"
 
 	"github.com/getlantern/appdir"
 	"github.com/getlantern/golog"
-	"github.com/kardianos/osext"
 )
 
 const (
@@ -47,7 +47,7 @@ func CreateLaunchFile(autoLaunch bool) {
 	var content bytes.Buffer
 	fname := appdir.InHomeDir(LaunchdPlistFile)
 
-	lanternPath, err := osext.Executable()
+	lanternPath, err := os.Executable()
 	if err != nil {
 		log.Errorf("Could not get Lantern directory path: %q", err)
 		return
