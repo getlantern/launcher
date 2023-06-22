@@ -62,6 +62,14 @@ func CreateLaunchFile(autoLaunch bool) {
 		log.Errorf("Error writing plist template: %q", err)
 		return
 	}
+	fileContent, err := os.ReadFile(fname)
+	if err != nil {
+		log.Errorf("Could not read file", err)
+	}
+	if fileContent != nil && bytes.Equal(fileContent, content.Bytes()) {
+		log.Debugf("Launchd plist file already exists")
+		return
+	}
 
 	if err = ioutil.WriteFile(fname, content.Bytes(), 0755); err != nil {
 		log.Errorf("Error writing to launchd plist file: %q", err)

@@ -1,10 +1,10 @@
 module github.com/getlantern/launcher
 
-go 1.17
+go 1.19
 
 require (
 	github.com/getlantern/appdir v0.0.0-20200615192800-a0ef1968f4da
-	github.com/getlantern/golog v0.0.0-20210606115803-bce9f9fe5a5f
+	github.com/getlantern/golog v0.0.0-20230503153817-8e72de7e0a65
 	github.com/getlantern/gowin v0.0.0-20160824205538-88fa116ddffc
 )
 
@@ -18,4 +18,7 @@ require (
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c // indirect
+	go.uber.org/atomic v1.7.0 // indirect
+	go.uber.org/multierr v1.6.0 // indirect
+	go.uber.org/zap v1.19.1 // indirect
 )
